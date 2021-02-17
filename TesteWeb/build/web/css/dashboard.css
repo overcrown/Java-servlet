@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(208, 150, 247);
+ }
+
+div#divMain {
+    width: 1000px;
+    position: absolute;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    width: 228px;
+    padding: 50px;
+    margin-top: 10px;
+}
+
+
+nav#navegacao {
+    position: absolute;
+    display: block;
+    left: 50px;
+    width: 1200px;
+   
+}
+nav#navegacao figure {
+    position: relative;
+    width: 270px;
+    height: 158px;
+    top: -170px;
+    list-style-type: none;
+    display: inline-block;
+    padding: 18px;
+    margin-top: 150px;
+}
+figure#estoque {
+    position: relative;
+    left: 295px;
+    top: -200px;
+}
+figure#pets {
+    position: relative;
+    left: -20px;
+    top: 0px;
+}
+figure#adotantes {
+    position: relative;
+    left: 20px;
+    top: 0px;
+}
+nav#navegacao figcaption {
+    position: relative;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 16pt;
+    padding: 8px;
+    background-size: 10px;
+    display: inline-block;
+    background-color: rgb(174, 73, 241);
+    transition: 0.5s;
+}
+
+nav#navegacao figcaption:hover {
+    background-color: rgb(87, 11, 138);
+    color: rgba(0, 0, 0, 0.8);
+}
+figcaption#pets {
+    position: relative;
+    left: 110px;
+    top: 10px;
+}
+figcaption#adotantes {
+    position: relative;
+    left: 72px;
+    top: 10px;
+}
+figcaption#estoque {
+    position: relative;
+    left: 70px;
+    top: 10px;
+}  
+
+header#header {
+    position: relative;
+    width: 1332px;
+    height: 100px;
+    left: -50px;
+    top: -20px;
+    margin-left: -150px;
+    background-color: rgb(87, 11, 138);
+}
+
+
+ul#lista-nav li{
+    display: inline-block;
+    margin-right: -5px;
+    font-size: 20pt;
+    color: rgba(0, 0, 0, 0);
+    padding: 0px;
+    width: 229px;
+    height:98px;
+    margin-top: -10px;
+    left: -50px;
+    list-style: none;
+    background-color: rgb(174, 73, 241); 
+    transition: background-color 0.5s;
+}
+
+nav#navbar li:hover {
+    background-color:rgb(87, 11, 138);
+    font-color: white;
+}
+
+nav#navbar {
+    display: block;
+    left: 200px;
+}
+
+
+nav#navbar ul {
+    padding: 20px;
+    position: relative;
+    left: 170px;
+    top: -10px;
+    list-style: none;
+}
+
+
+

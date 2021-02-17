@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>BUSCAR ITEM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
+        <style>
+            form {
+                width: 700px;
+            }
+
+            input, textarea {
+                font-family: sans-serif;
+                font-size: 13pt;
+                font-weight: normal;
+            }
+
+            input:hover, textarea:hover {
+                background-color: #dddddd;
+            }
+
+            input#id_enviar {
+                padding: 5px;
+                margin: 10px;
+                margin-left: 300px;
+            }
+
+            p#cor {
+                padding: 5px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+<body>
+    
+<div id="divMain">
+    <header id="header">
+        <nav id="navbar">
+            <ul id="lista-nav">
+                <li><a href="dashboard.html">SWPETS</a></li>
+                <li><a href="functionPets.html">PETS</a></li>
+                <li><a href="functionAdotante.html">ADOTANTES</a></li>
+                <li><a href="functionEstoque.html">ESTOQUE</a></li>
+                <li><a href="login">SAIR</a></li>
+            </ul>
+        </nav>
+    </header>  
+    
+<form action="servletEstoques" method="get">
+<!--
+<p><label for="id_codigo">Código do item:</label><input type="number" name="codigo" id="id_codigo"  placeholder="Ex: 12"/> </p>
+-->   
+<p><label for="id_item">Nome do item:</label><input type="text" name="item" id="id_item" size="50" maxlength="50" placeholder="Ex: Ração"/> </p>
+
+<!--
+<p><label for="id_categoria">Categoria:</label>
+    <select name="categoria" id="id_categoria">
+        <option value=""></option>
+        <option value="alimentacao">Alimentação</option>
+        <option value="veterinario">Veterinário</option>
+        <option value="higiene">Higiene</option>
+        <option value="outro">Outro</option>
+    </select></p>
+-->
+Enviar<input type="submit" name="acao" value="buscar"/>
+
+</form>
+
+</div>
+</body>
+</html>

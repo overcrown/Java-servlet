@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/form.css"/>
+    <script language="javascript" src="javascript/functions.js"></script>
+    <script>
+        function calc_total() {
+            let amount;
+            amount = parseInt(document.getElementById("id_quantidade").value);
+            let total = amount * 1500;
+            document.getElementById("preco").value = total; 
+        }
+    </script>
+</head>
+
+<body>
+<div id="interface">
+    <header id="cabecalho">
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+
+    <img id="icone"  src="midia_site\main_glass5.png"/>
+<nav id="menu">
+    <h1>Menu Principal</h1>
+    <ul type="disc">
+        <li onmouseover="muda_foto('midia_site/casa2.png')" onmouseout="muda_foto('midia_site/main_glass5.png')"><a href="index.html">Home</a></li> <!--Caminho da foto smp com aspas simples, href de referencia hipertexto-->
+
+        <li onmouseover="muda_foto('midia_site/especificacoes2.png')" onmouseout="muda_foto('midia_site/main_glass5.png')"><a href="specs.html">Especificações</a></li>
+
+        <li onmouseover="muda_foto('midia_site/foto.png')" onmouseout="muda_foto('midia_site/main_glass5.png')"><a href="fotos.html">Fotos</a></li>
+
+        <li><a href="multimidia.html">Multimidia</a></li>
+        <li><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+</nav>
+    </header>
+
+<header>
+<h1>Fale Conosco</h1>
+</header>
+
+<section> 
+    <!--action="mailto:gabrielbms@gmail.com"-->
+
+<form method="post" action="functionsPhp/cadastroFormulario.php" id="metodo"  >
+<!--Fieldset é uma tag que representa um \conjunto de campos\, cabe muito bem dentro de uma tag Form-->
+<!--Sempre lembrar de fechar a tag input-->
+<fieldset id="usuario"><legend>Identificação do Usuário</legend>
+
+<p><label for="id_name">Nome:</label><input type="text" name="obj_name" id="id_name" size="35" maxlength="30" placeholder="Nome completo" required/> *</p>
+
+<p><label for="id_password">Senha:</label><input type="password" name="obj_password" id="id_password" size="9" maxlength="9" placeholder="Senha" required/> *</p>
+
+<p><label for="id_email" >E-mail:</label><input type="email" name="obj_email" id="id_email" size="30" maxlength="30" placeholder="user@gmail.com" required/> *</p>
+<fieldset><legend>Sexo:</legend>
+
+    <input type="radio" name="obj_sexo" id="id_man" value="Masculino" required checked/><label for="id_man">Masculino</label><br/> 
+    <input type="radio" name="obj_sexo" id="id_girl" value="Feminino" required/><label for="id_girl">Feminino</label>
+
+</fieldset>
+<p><label for="id_date">Data de Nascimento:</label><input type="date" name="obj_date" id="id_date" required/> *</p>
+</fieldset>
+
+<fieldset id="endereco"><legend>Endereço do Usuário</legend>
+<p><label for="id_adress">Logradouro:</label><input type="text" name="obj_adress" id="id_adress" size="20" maxlength="80" placeholder="Rua" required/> *</p>
+<p><label for="id_number">Número:</label><input type="number" name="obj_number" id="id_number" min="1" max="9999" placeholder="N°" required> *</p>
+<p><label for="estado">Estado:</label>
+    <select name="select_estado" id="estado" required>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option></p>
+    </select> *
+<p><label for="id_cidade">Cidade</label>
+<input type="text" name="obj_cidade" id="id_cidade" maxlength="40" size="20" placeholder="Cidade" list="cidades" required/> *</p>
+<datalist id="cidades"> <!--o parametro list do input acima esta fazendo a conexao com as opções por meio do id de datalista-->
+    <option value="São Paulo"></option>
+    <option value="Osasco"></option>
+    <option value="Cotia"></option>
+</datalist>
+</fieldset>
+
+<fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+<p><label for="id_mensagem">Ponto de Referência:</label>
+<textarea name="obj_referencia" id="id_mensagem" cols="45" rows="5" placeholder="Deixa sua mensagem"></textarea></p>
+<p><label for="grau">Grau de Urgência&nbsp;&nbsp;&nbsp;&nbsp;</label>
+0<input type="range" name="obj_grau" id="grau" min="0" max="10" step="1"/>10</p>
+
+</fieldset>
+
+<fieldset id="pedido"><legend>Quero um Google Glass</legend>
+    <p><input type="checkbox" name="obj_pedido" id="aaa" checked />
+    <label for="aaa">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cor">Cor:</label>
+        <select name="select_cor" id="cor">
+            <option value="Branco">Branco</option>
+            <option value="Verde">Verde</option>
+            <option value="Azul">Azul</option></p>
+        </select>
+    <p><label for="id_quantidade">Quantidade:</label>
+    <input type="number" name="obj_quantidade" id="id_quantidade" required oninput="calc_total()"/> *</p>
+    <p><label for="preco">Preço Total: R$</label>
+    <input type="text" name="obj_preco" id="preco" placeholder="Total a pagar" readonly /></p>
+</fieldset>
+
+<input type="submit" value="ENVIAR" id="id_enviar"/>
+
+
+
+</form>
+
+</section>
+
+<footer id="rodape"> <!--Cria o rodapé da página, informações que não fazem parte do conteúdo-->
+<p>Copyright &copy; 2020 - by Gabriel Brito <br/>
+<a href="https://www.facebook.com/byelll?ref=bookmarks" target="_blank">Facebook </a>|<a href="https://www.instagram.com/real.gameboy/" target="_blank"> Instagram </a></p>
+</footer>
+
+</div>
+</body>
+</html>

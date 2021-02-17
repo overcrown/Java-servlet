@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>INSERIR ITEM</title>
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
+        <style>
+            form {
+                width: 700px;
+            }
+
+            input, textarea {
+                font-family: sans-serif;
+                font-size: 13pt;
+                font-weight: normal;
+            }
+
+            input:hover, textarea:hover {
+                background-color: #dddddd;
+            }
+
+            input#id_enviar {
+                padding: 5px;
+                margin: 10px;
+                margin-left: 300px;
+            }
+
+            p#cor {
+                padding: 5px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+<body>
+<div id="divMain">
+    <header id="header">
+        <nav id="navbar">
+            <ul id="lista-nav">
+                <li><a href="dashboard.html">SWPETS</a></li>
+                <li><a href="functionPets.html">PETS</a></li>
+                <li><a href="functionAdotante.html">ADOTANTES</a></li>
+                <li><a href="functionEstoque.html">ESTOQUE</a></li>
+                <li><a href="login">SAIR</a></li>
+            </ul>
+        </nav>
+    </header>  
+        
+<section> 
+
+<form action="servletEstoques" method="get"  >
+
+<fieldset id="usuario"><legend>Controle do Estoque</legend>
+
+<p><label for="id_item">Nome do item:</label><input type="text" name="item" id="id_item" size="50" maxlength="50" placeholder="Ex: Ração" required/> </p>
+
+<p><label for="id_categoria">Categoria:</label>
+    <select name="categoria" id="id_categoria" required>
+            <option value="alimentacao">Alimentação</option>
+            <option value="veterinario">Veterinário</option>
+            <option value="higiene">Higiene</option>
+            <option value="outro">Outro</option>
+    </select>
+</p>
+
+<p><label for="id_quantidade">Quantidade:</label><input type="text" name="quantidade" id="id_quantidade" size="30" maxlength="30" placeholder="Ex: 5kg" required/> </p>
+            
+
+</fieldset>
+
+
+Enviar <input type="submit" name="acao" value="INSERIR"/>
+
+
+
+</form>
+
+</section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>INSERIR PET</title>
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
+        <style>
+            form {
+                width: 700px;
+            }
+
+            input, textarea {
+                font-family: sans-serif;
+                font-size: 13pt;
+                font-weight: normal;
+            }
+
+            input:hover, textarea:hover {
+                background-color: #dddddd;
+            }
+
+            input#id_enviar {
+                padding: 5px;
+                margin: 10px;
+                margin-left: 300px;
+            }
+
+            p#cor {
+                padding: 5px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+<body>
+<div id="divMain">
+    <header id="header">
+        <nav id="navbar">
+            <ul id="lista-nav">
+                <li><a href="dashboard.html">SWPETS</a></li>
+                <li><a href="functionPets.html">PETS</a></li>
+                <li><a href="functionAdotante.html">ADOTANTES</a></li>
+                <li><a href="functionEstoque.html">ESTOQUE</a></li>
+                <li><a href="login">SAIR</a></li>
+            </ul>
+        </nav>
+    </header>  
+        
+<section> 
+
+<form action="servletPets" method="post">
+
+<fieldset id="usuario"><legend>Identificação do Animal</legend>
+
+<p><label for="id_name">Nome:</label><input type="text" name="nome" id="id_name" size="30" maxlength="30" placeholder="Ex: Marley" required/> </p>
+
+<fieldset><legend>Espécie:</legend>
+
+    <input type="radio" name="especie" id="id_gato" value="Gato" required checked/><label for="id_gato">Gato</label><br/> 
+    <input type="radio" name="especie" id="id_cachorro" value="Cachorro" required/><label for="id_cachorro">Cachorro</label>
+
+</fieldset>
+
+<p><label for="id_cor">Cor:</label><input type="text" name="cor" id="id_cor" size="20" maxlength="20" placeholder="Cor:" required/> </p>
+
+<p><label for="id_raca">Raca:</label><input type="text" name="raca" id="id_raca" size="30" maxlength="30" placeholder="Raça:"/> </p>
+
+<p><label for="id_idade">Idade:</label><input type="number" name="idade" id="id_idade"/></p>
+
+<fieldset><legend>Castrado:</legend>
+
+    <input type="radio" name="castrado" id="id_castrado" value="sim" checked/><label for="id_castrado">Castrado</label><br/> 
+    <input type="radio" name="castrado" id="id_naoCastrado" value="nao" /><label for="id_cachorro">Não castrado</label>
+
+</fieldset>
+
+<p><label for="id_vacinacao">Vacina</label>
+    <select name="vacinacao" id="id_vacinacao">
+            <option value="atualizada">Atualizada</option>
+            <option value="atrasada">Atrasada</option>
+    </select>
+</p>
+    
+<p><label for="id_data">Data de Chegada:</label><input type="text" name="dataChegada" id="id_data" size="15" maxlength="15" placeholder="27/11/2020" required/></p>
+
+
+<input type="radio" name="adotado" id="id_adotado" value="sim" /><label for="id_adotado">Adotado</label><br/> 
+<input type="radio" name="adotado" id="id_naoAdotado" value="nao" checked/><label for="id_naoAdotado">Não adotado</label>
+
+<p><label for="id_nascimento">Nascimento:</label><input type="text" name="nascimento" id="id_nascimento" size="15" maxlength="15" placeholder="10/10/2010"/></p>
+
+<p><label for="id_porte">Tamanho:</label>
+    <select name="porte" id="id_porte">
+            <option value="pequeno">Pequeno</option>
+            <option value="media">Médio</option>
+            <option value="grande">Grande</option>
+            <option value="gigante">Gigante</option>
+    </select>
+</p>
+
+<p><label for="id_cadastrador">Código de Cadastrador:</label><input type="number" name="cadastrador" id="id_cadastrador"/></p>
+
+<p><label for="id_observacao">Ponto de Referência:</label>
+<textarea name="observacao" id="id_observacao" cols="45" rows="5" placeholder="Deixa sua observação"></textarea></p>
+
+</fieldset>
+
+
+<input type="submit" name="acao" value="INSERIR" id="id_enviar"/>
+
+
+
+</form>
+
+</section>
+
+</div>
+</body>
+</html>

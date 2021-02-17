@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>INSERIR VOLUNTÁRIO</title>
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
+        <style>
+            form {
+                width: 700px;
+            }
+
+            input, textarea {
+                font-family: sans-serif;
+                font-size: 13pt;
+                font-weight: normal;
+            }
+
+            input:hover, textarea:hover {
+                background-color: #dddddd;
+            }
+
+            input#id_enviar {
+                padding: 5px;
+                margin: 10px;
+                margin-left: 300px;
+            }
+
+            p#cor {
+                padding: 5px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+<body>
+<div id="divMain">
+    <header id="header">
+        <nav id="navbar">
+            <ul id="lista-nav">
+                <li><a href="dashboard.html">SWPETS</a></li>
+                <li><a href="functionPets.html">PETS</a></li>
+                <li><a href="functionAdotante.html">ADOTANTES</a></li>
+                <li><a href="functionEstoque.html">ESTOQUE</a></li>
+                <li><a href="login">SAIR</a></li>
+            </ul>
+        </nav>
+    </header>  
+        
+<section> 
+<form action="servletColaborador" method="get" >
+
+<fieldset id="fieldsetAdotante"><legend>Identificação do Adotante</legend>
+
+<p><label for="id_name">Nome:</label><input type="text" name="nome" id="id_name" size="60" maxlength="60" placeholder="Ex: João Pedro" required/> </p>
+
+<p><label for="id_idade">Idade:</label><input type="number" name="idade" id="id_idade" required/></p>
+
+<p><label for="id_nascimento">Nascimento:</label><input type="text" name="nascimento" id="id_nascimento" size="15" maxlength="15" placeholder="10/10/2010" required/></p>
+
+<p><label for="id_endereco">Endereço:</label><input type="text" name="endereco" id="id_endereco" size="100" maxlength="100" placeholder="Rua" required/> </p>
+<p><label for="id_endereco_numero">Número:</label><input type="number" name="endereco_numero" id="id_endereco_numero" min="1" max="99999" placeholder="N°" required> </p>
+
+<p><label for="id_cargo">Cargo:</label><input type="text" name="cargo" id="id_cargo" size="30" maxlength="30" required/></p>
+
+<p><label for="id_rg">RG:</label><input type="text" name="rg" id="id_rg" required/></p>
+<p><label for="id_cpf">CPF:</label><input type="text" name="cpf" id="id_cpf" required/></p>
+
+<p><label for="id_telefone">Telefone:</label><input type="text" name="telefone" id="id_telefone" size="15" maxlength="15" placeholder="Ex: 32204569"/> </p>
+<p><label for="id_celular">Celular:</label><input type="text" name="celular" id="id_celular" size="15" maxlength="15" placeholder="Ex: 11956158845"/> </p>
+
+<p><label for="id_email">Email:</label><input type="text" name="email" id="id_email" size="60" maxlength="60" placeholder="user@gmail.com"/> </p>
+
+<p><label for="id_data_inicio">Dia:</label><input type="text" name="data_inicio" id="id_data_inicio" size="15" maxlength="15" placeholder="27/11/2020" required/></p>
+
+</fieldset>
+
+<input type="submit" name="acao"  value="INSERIR" id="id_enviar"/>
+
+</form>
+</section>
+
+</div>
+</body>
+</html>
+

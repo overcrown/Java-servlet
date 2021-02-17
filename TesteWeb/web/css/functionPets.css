@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+
+a {
+    list-style: none;
+}
+
+nav#navegacaoPets {
+    display: block;
+    width: 1200px;
+}
+
+ul#lista1 figure {
+    display:inline-block;
+    height: 500px;
+}
+
+figure#mostrar {
+    position: absolute;
+    left: 20px;
+    top: 170px;
+}
+figcaption#mostrar {
+    position: absolute;
+    left: 50px;
+    top: 215px;
+}
+
+/*------------*/
+figure#buscar {
+    position: absolute;
+    left: 280px;
+    
+}
+figcaption#buscar {
+    position: absolute;
+    left: 40px;
+    top: 215px;
+}
+/*-------------*/
+figure#cadastro {
+    position: absolute;
+    left: 530px;
+    top: 170px;
+}
+figcaption#cadastro {
+    position: absolute;
+    left:30px;
+    top: 215px;
+}
+/*-----------*/
+figure#adocao {
+    position: absolute;
+    left:730px;
+    top: 108px;
+}
+figcaption#adocao {
+    position: absolute;
+    left: 140px;
+   top:280px;
+}
+
+
+/*======================*/
+figure#gatos {
+    position: absolute;
+    left: 20px;
+    top: 450px;
+    
+}
+figcaption#gatos {
+    position: absolute;
+    left: 50px;
+    top: 200px;
+}
+/*-----------------*/
+figure#cachorros {
+    position: absolute;
+    left: 380px;
+    top: 450px;
+    
+}
+figcaption#cachorros {
+    position: absolute;
+    left: 50px;
+    top: 200px;
+}
+/*---------------------*/
+figure#adotados {
+    position: absolute;
+    left: 730px;
+    top: 450px;
+    
+}
+figcaption#adotados {
+    position: absolute;
+    left: 50px;
+    top: 200px;
+}

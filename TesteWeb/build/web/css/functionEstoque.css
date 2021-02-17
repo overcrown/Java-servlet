@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+a {
+    list-style: none;
+}
+
+nav#navegacaoAdotante {
+    display: block;
+    width: 1200px;
+}
+
+ul#lista figure {
+    display:inline-block;
+    height: 500px;
+}
+
+figure#mostrar {
+    position: absolute;
+    left: 20px;
+    top: 200px;
+    
+}
+figcaption#mostrar {
+    position: absolute;
+    left: 60px;
+    top: 200px;
+}
+/*-----------------*/
+figure#buscar {
+    position: absolute;
+    left: 380px;
+    top: 200px;
+    
+}
+figcaption#buscar {
+    position: absolute;
+    left: 50px;
+    top: 200px;
+}
+/*---------------------*/
+figure#cadastro {
+    position: absolute;
+    left: 730px;
+    top: 200px;
+    
+}
+figcaption#cadastro {
+    position: absolute;
+    left: 50px;
+    top: 208px;
+}
